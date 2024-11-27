@@ -24,7 +24,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", screenshot.toString());
         }
     }
-
+    @After
     public void tearDown(){
         DriverFactory.quitDriver();
         System.out.println("Aplicacion cerrada!");
