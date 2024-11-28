@@ -1,18 +1,16 @@
 package com.globant_test.runners;
 
-import org.junit.runner.RunWith;
+//import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"com.globant_test.stepDefinitions", "com.globant_test.hooks"},
-        plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-
-        tags ="@smoketest"
+        plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests{
 }
